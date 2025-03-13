@@ -65,7 +65,7 @@ export default function Demo() {
 
       // Send transaction
       await sendTransaction({
-        to: "0xb2c687872791F1f39e2b9e52508a7B6963Ff1d7b" as `0x${string}`, // Use the user's verification address
+        to: selectedUser.verifications[0], // Use the user's verification address
         value: value,
         chainId: 42220,
       });
@@ -268,56 +268,60 @@ export default function Demo() {
         <ConnectButton />
       </div>
 
-      <h1 className="text-xl font-bold mb-4 text-center">
-        Search Farcaster Users
-      </h1>
+      {isConnected && (
+        <div>
+          <h1 className="text-xl font-bold mb-4 text-center">
+            Search Farcaster Users
+          </h1>
 
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        className="flex justify-center space-x-2"
-      >
-        <input
-          type="text"
-          placeholder="Enter username..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="p-2 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-        />
-      </form>
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="flex justify-center space-x-2"
+          >
+            <input
+              type="text"
+              placeholder="Enter username..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="p-2 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </form>
 
-      <div className="mt-6 w-full max-w-md">
-        {loading ? (
-          <div className="flex justify-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="mt-6 w-full max-w-md">
+            {loading ? (
+              <div className="flex justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+              </div>
+            ) : error ? (
+              <p className="text-red-500 text-center">{error}</p>
+            ) : users.length > 0 ? (
+              <ul className="space-y-3">
+                {users.map((user) => (
+                  <li
+                    key={user.fid}
+                    onClick={() => setSelectedUser(user)}
+                    className="flex items-center space-x-4 p-3 border border-gray-800 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer"
+                  >
+                    <img
+                      src={user.pfp_url || "/default-avatar.png"}
+                      alt={user.username}
+                      className="w-12 h-12 rounded-full"
+                    />
+                    <div>
+                      <p className="font-bold">{user.username}</p>
+                      <p className="text-sm ">FID: {user.fid}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 text-center">
+                {query ? "No results found" : "Start typing to search"}
+              </p>
+            )}
           </div>
-        ) : error ? (
-          <p className="text-red-500 text-center">{error}</p>
-        ) : users.length > 0 ? (
-          <ul className="space-y-3">
-            {users.map((user) => (
-              <li
-                key={user.fid}
-                onClick={() => setSelectedUser(user)}
-                className="flex items-center space-x-4 p-3 border border-gray-800 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer"
-              >
-                <img
-                  src={user.pfp_url || "/default-avatar.png"}
-                  alt={user.username}
-                  className="w-12 h-12 rounded-full"
-                />
-                <div>
-                  <p className="font-bold">{user.username}</p>
-                  <p className="text-sm ">FID: {user.fid}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-4 text-center">
-            {query ? "No results found" : "Start typing to search"}
-          </p>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
