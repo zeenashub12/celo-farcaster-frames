@@ -75,18 +75,22 @@ Once configured, you will see a nice background color and splash image while the
 
 Once the app is loaded, connect your Celo wallet to proceed.
 
-<img src="images/04_previewFrame.jpg" alt="Image Four - Preview" width="200">
-<img src="images/05_selectWallet.jpg" alt="Image Five - Select Wallet" width="200">
-<img src="images/06_connectingWallet.jpg" alt="Image Six - Connect Wallet" width="200">
-<img src="images/07_connectingWallet.jpg" alt="Image Seven - Connect Wallet" width="200">
-<img src="images/08_connectingWallet.jpg" alt="Image Eight - Connect Wallet" width="200">
+<div style="display: flex; gap: 10px;">
+  <img src="images/04_previewFrame.jpg" alt="Image Four - Preview" width="200">
+  <img src="images/05_selectWallet.jpg" alt="Image Five - Select Wallet" width="200">
+  <img src="images/06_connectingWallet.jpg" alt="Image Six - Connect Wallet" width="200">
+  <img src="images/07_connectingWallet.jpg" alt="Image Seven - Connect Wallet" width="200">
+  <img src="images/08_connectingWallet.jpg" alt="Image Eight - Connect Wallet" width="200">
+</div>
 
 ### Search for a Farcaster User
 
 The Farcaster search form will pop up. Enter a username to search for a person.
 
-<img src="images/09_searchUser.jpg" alt="Image Nine - Search User" width="200">
-<img src="images/10_searchUser.jpg" alt="Image Ten - Search User" width="200">
+<div style="display: flex; gap: 10px;">
+    <img src="images/09_searchUser.jpg" alt="Image Nine - Search User" width="200">
+    <img src="images/10_searchUser.jpg" alt="Image Ten - Search User" width="200">
+</div>
 
 ### Send Tokens
 
@@ -94,8 +98,10 @@ The Farcaster search form will pop up. Enter a username to search for a person.
 2. Choose the preferred network.
 3. Enter the amount you want to send.
 
-<img src="images/11_sendToken.jpg" alt="Image Eleven - Send Token Form" width="200">
-<img src="images/12_sendToken.jpg" alt="Image Twelve - Send Token Form" width="200">
+<div style="display: flex; gap: 10px;">
+    <img src="images/11_sendToken.jpg" alt="Image Eleven - Send Token Form" width="200">
+    <img src="images/12_sendToken.jpg" alt="Image Twelve - Send Token Form" width="200">
+</div>
 
 4. Click the **Send** button, which will route you to your wallet for transaction approval.
 
