@@ -1,6 +1,7 @@
 # Celo x Farcaster Frame for a Simple Paybot
 
 This demo project is based on the [Farcaster V2 Frame](https://docs.farcaster.xyz/developers/frames/v2/getting-started). The project demonstrates a simple Farcaster paybot frame that allows users to search for people on Farcaster and tip them with Celo tokens.
+You can test the project with the live deployed version : [https://farcaster-frame-celo-template.vercel.app/](https://farcaster-frame-celo-template.vercel.app/).
 
 ## Getting Started
 
@@ -20,7 +21,7 @@ code .
 ### Navigate to the Template Directory
 
 ```bash
-cd templates/celo-paybot-template
+cd celo-paybot-template
 ```
 
 ### Install Dependencies
@@ -34,6 +35,9 @@ npm install
 Create a `.env` file and add the following:
 
 ```bash
+NEXT_PUBLIC_URL=http://localhost:3000
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_generated_secret_here
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=YOUR_WALLET_CONNECT_PROJECT_ID
 NEXT_PUBLIC_PINATA_JWT=YOUR_PINATA_JWT
 ```
