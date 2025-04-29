@@ -1,4 +1,4 @@
-# Celo x Farcaster Frame for a Simple Paybot
+# Celo x Farcaster MiniApp for a Simple Paybot
 
 This demo project is based on the [Farcaster V2 Frame](https://docs.farcaster.xyz/developers/frames/v2/getting-started). The project demonstrates a simple Farcaster paybot frame that allows users to search for people on Farcaster and tip them with Celo tokens.
 You can test the project with the live deployed version : [https://farcaster-frame-celo-template.vercel.app/](https://farcaster-frame-celo-template.vercel.app/).

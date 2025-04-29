@@ -1,4 +1,4 @@
-# Celo Farcaster Frames
+# Celo Farcaster MiniApps
 
 This repository serves as a mono-repo for all Farcaster V2 frames for Celo.
 
@@ -20,7 +20,7 @@ This repository serves as a mono-repo for all Farcaster V2 frames for Celo.
      ```bash
      cd celo-farcaster-frames
      ```
-   - Add your Farcaster frame code to the appropriate directory or create a new one if necessary.
+   - Add your Farcaster MiniApp code to the appropriate directory or create a new one if necessary.
 
 4. **Commit your changes**  
    - Stage your changes:
@@ -48,4 +48,4 @@ This repository serves as a mono-repo for all Farcaster V2 frames for Celo.
 7. **Wait for review**  
    - The repository maintainers will review your pull request. They may request changes or approve it.
 
-By following these steps, you can easily share your Farcaster frames with the Celo community. Thank you for your contributions!
+By following these steps, you can easily share your Farcaster MiniApps with the Celo community. Thank you for your contributions!

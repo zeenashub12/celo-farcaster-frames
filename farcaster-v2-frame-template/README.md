@@ -1,6 +1,4 @@
-# 🖼️ Farcaster V2 Frame template
-
-A Farcaster Celo Tip Me Frame v2 Template.
+# A Farcaster Celo Tip Me Frame v2 Template.
 
 ## Getting Started
 
@@ -68,6 +66,5 @@ vercel --prod
 
 To test the frame, open the Warpcast app, go to Developer Tools, and test both the embedded image and the full frame.
 
-Here’s the link to this template: [Farcaster v2 Frame Template](https://farcaster-v2-frame-template.vercel.app/)
 
 
